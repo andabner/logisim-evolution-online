@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Logisim-Evolution Online</title>
-  <!-- SDK do CheerpJ (servido pela LeaningTech) -->
-  <script src="https://cjrtnc.leaningtech.com/4.2/loader.js"></script>
-</head>
-<body>
-  <h1>Logisim-Evolution no Navegador</h1>
-  <p>Clique no botão para iniciar o Logisim-Evolution sem precisar instalar Java.</p>
-
-  <button onclick="cheerpjRunJar('logisim-evolution-online/logisim-evolution.jar')">
-    Abrir Logisim
-  </button>
-  
-  <script>
-    // Inicializa o runtime CheerpJ
-    cheerpjInit();
-  </script> 
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Browser</title>
+    <script src="https://cjrtnc.leaningtech.com/4.2/loader.js"></script>
+  </head>
+  <body>
+    <script>
+      (async function () {
+        await cheerpjInit({
+        tailscaleAuthKey:"PasteYourKeyHere",
+       
+      });
+        cheerpjCreateDisplay(800, 600);
+        await cheerpjRunJar("/app/logisim-evolution.jar");
+      })();
+    </script>
+  </body>
 </html>
