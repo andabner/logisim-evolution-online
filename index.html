@@ -9,14 +9,32 @@
 <body>
   <h1>Logisim-Evolution no Navegador</h1>
   <p>Clique no botão para iniciar o Logisim-Evolution sem precisar instalar Java.</p>
-
+  <!--
   <button onclick="cheerpjRunJar('logisim-evolution-online/logisim-evolution.jar')">
     Abrir Logisim
   </button>
-
+  -->
+  <script>
+      (async function () {
+        await cheerpjInit();
+        cheerpjCreateDisplay(800, 600);
+        await cheerpjRunJar("logisim-evolution-online/logisim-evolution.jar");
+      })();
+    </script>
+ <!--
   <script>
     // Inicializa o runtime CheerpJ
     cheerpjInit();
-  </script>
+  </script> -->
 </body>
 </html>
+
+<body>
+    <script>
+      (async function () {
+        await cheerpjInit();
+        cheerpjCreateDisplay(800, 600);
+        await cheerpjRunJar("/app/my_application_archive.jar");
+      })();
+    </script>
+  </body>
